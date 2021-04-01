@@ -1,0 +1,125 @@
+
+
+/* ************ ADD YOUR CUSTOM STYLES ************ */
+
+
+
+/****************/
+/*   BAR-CHART  */
+/****************/
+body {background-color: lightgray;}
+.bar {
+  fill: #000000;
+}
+
+.bar:hover {
+  fill: #FFFFFF;
+}
+
+.axis {
+  font: 10px sans-serif;
+}
+
+.axis path,
+.axis line {
+  fill: none;
+  stroke: #FFFFFF;
+  shape-rendering: crispEdges;
+}
+
+.x-axis path {
+  display: none;
+}
+
+.axis-title {
+	fill: #000000;
+	font-size: 12px;
+}
+
+
+/****************/
+/*   TOOLTIPS   */
+/****************/
+
+#tooltip {
+  position: absolute;
+  width: 100px;
+  height: auto;
+  padding: 10px;
+  background-color:blueviolet;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
+  -webkit-box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.4);
+  -moz-box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.4);
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.4);
+  pointer-events: none;
+}
+#tooltip.hidden {
+  display: none;
+}
+#tooltip p {
+  margin: 10;
+  font-family: sans-serif;
+  font-size: 16px;
+  line-height: 20px;
+background-color: yellow;
+}
+
+.container{
+border-bottom: solid 2px black;
+    padding-bottom: 5vh;
+    padding-top: 3vh;
+}
+.container1{
+
+    padding-bottom: 3vh;
+}
+.container2{
+
+    padding-top: 3vh;
+}
+
+
+main {
+  display: flex;
+  height: 100%;
+ 
+}
+
+p {
+  cursor: pointer;
+  position: relative;
+  display: inline-block;
+  font-size: 30px;
+  background: linear-gradient(to bottom, #000, #000 60%, #fff 60%, #fff 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  background-repeat: no-repeat;
+  transition: background 0.2s ease-out;
+  white-space: nowrap;
+}
+
+span {
+  position: relative;
+}
+
+span:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 15px;
+  background: #000;
+  bottom: 9px;
+  transition: all 0.2s ease-out;
+}
+
+p:hover {
+  background-position: 0 11px;
+}
+
+span:hover:before {
+  transform: translateY(10px)
+}
